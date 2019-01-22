@@ -35,6 +35,8 @@ class Kennel extends Component {
             <article className="kennel">
                 <LocationList locations={this.state.locations} />
                 <EmployeeList employees={this.state.employees} />
+
+                {/* <EmployeeList  /> If you remove employees={this.state.employees} in the Kennel component, it can’t be passed down as props to the child component - it will simply live in state in the Kennel component, but the data will never reach a child component.*/}
             </article>
         )
     }

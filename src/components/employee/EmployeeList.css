@@ -1,0 +1,16 @@
+.employeeList {
+    /* display: flex; */
+    margin: 10px;
+    padding: 10px;
+    /* background-color: burlywood; */
+    justify-content: space-around;
+    flex-direction: row;
+    border: 4px solid burlywood;
+    border-radius: 5px;
+}
+
+.employees {
+    margin: 5px;
+    padding: 5px;
+    border: 2px dotted grey;
+}
