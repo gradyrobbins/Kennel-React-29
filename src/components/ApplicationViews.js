@@ -3,6 +3,7 @@ import React, { Component } from "react"
 import AnimalList from './animals/AnimalList'
 import LocationList2 from './location/LocationList2'
 import EmployeeList from './employee/EmployeeList'
+import OwnersList from './owners/OwnersList'
 
 // import AnimalManager from "../modules/AnimalManager"
 // // Example code. Make this fit into how you have written yours.
@@ -34,10 +35,19 @@ class ApplicationViews extends Component {
         { id: 6, name: "Checkers" }
     ]
 
+    ownersFromAPI = [
+        { id: 1, name: "John Doe" },
+        { id: 2, name: "Shu" },
+        { id: 3, name: "Dejan" },
+        { id: 4, name: "Andy" },
+        { id: 5, name: "Dek" },
+        { id: 6, name: "Zac" }
+    ]
     state = {
         employees: this.employeesFromAPI,
         locations: this.locationsFromAPI,
-        animals: this.animalsFromAPI
+        animals: this.animalsFromAPI,
+        owners: this.ownersFromAPI
     }
 
     render() {
@@ -51,6 +61,9 @@ class ApplicationViews extends Component {
                 }} />
                 <Route path="/employees" render={(props) => {
                     return <EmployeeList employees={this.state.employees} />
+                }} />
+                <Route path="/owners" render={(props) => {
+                    return <OwnersList owners={this.state.owners} />
                 }} />
             </React.Fragment>
         )
