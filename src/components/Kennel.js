@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import EmployeeList from "./employee/EmployeeList"
-import LocationList from "./location/LocationList"
+import LocationList2 from "./location/LocationList2"
 import "./Kennel.css"
 
 
@@ -22,8 +22,10 @@ class Kennel extends Component {
     // This will eventually get pulled from the API
     locationsFromAPI = [
         { id: 1, name: "Nashville North", address: "500 Circle Way" },
-        { id: 2, name: "Nashville South", address: "10101 Binary Court" }
+        { id: 2, name: "Nashville South", address: "123 Main Street" }
     ]
+
+
 
     state = {
         employees: this.employeesFromAPI,
@@ -33,7 +35,7 @@ class Kennel extends Component {
     render() {
         return (
             <article className="kennel">
-                <LocationList locations={this.state.locations} />
+                <LocationList2 locations={this.state.locations} />
                 <EmployeeList employees={this.state.employees} />
 
                 {/* <EmployeeList  /> If you remove employees={this.state.employees} in the Kennel component, it can’t be passed down as props to the child component - it will simply live in state in the Kennel component, but the data will never reach a child component.*/}
