@@ -25,8 +25,6 @@ class Kennel extends Component {
         { id: 2, name: "Nashville South", address: "123 Main Street" }
     ]
 
-
-
     state = {
         employees: this.employeesFromAPI,
         locations: this.locationsFromAPI
