@@ -1,7 +1,9 @@
 import React, { Component } from "react"
 import EmployeeList from "./employee/EmployeeList"
 import LocationList2 from "./location/LocationList2"
+import AnimalList from "./animals/AnimalList"
 import "./Kennel.css"
+
 
 
 class Kennel extends Component {
@@ -12,6 +14,7 @@ class Kennel extends Component {
         faking it and just creating those arrays in the component
         itself
     */
+   // employees/locations/animals/owners data will eventually get pulled from the API
     employeesFromAPI = [
         { id: 1, name: "Jessica Younker" },
         { id: 2, name: "Jordan Nelson" },
@@ -19,15 +22,31 @@ class Kennel extends Component {
         { id: 4, name: "Blaise Roberts" }
     ]
 
-    // This will eventually get pulled from the API
     locationsFromAPI = [
         { id: 1, name: "Nashville North", address: "500 Circle Way" },
         { id: 2, name: "Nashville South", address: "123 Main Street" }
     ]
 
+    animalsFromAPI = [
+        { id: 1, name: "Murphy", breed: "Bubba" },
+        { id: 2, name: "Bugsy", breed: "Lab-Mix" }
+    ]
+
+    ownersFromAPI = [
+        { id: 1, name: "Ryan Tanay" },
+        { id: 2, name: "Emma Beaton" },
+        { id: 3, name: "Dani Adkins" },
+        { id: 4, name: "Adam Oswalt" },
+        { id: 5, name: "Fletcher Bangs" },
+        { id: 6, name: "Angela Lee" }
+    ]
+
+
     state = {
         employees: this.employeesFromAPI,
-        locations: this.locationsFromAPI
+        locations: this.locationsFromAPI,
+        animals: this.animalsFromAPI,
+        owners: this.ownersFromAPI
     }
 
     render() {
@@ -35,8 +54,8 @@ class Kennel extends Component {
             <article className="kennel">
                 <LocationList2 locations={this.state.locations} />
                 <EmployeeList employees={this.state.employees} />
-
                 {/* <EmployeeList  /> If you remove employees={this.state.employees} in the Kennel component, it can’t be passed down as props to the child component - it will simply live in state in the Kennel component, but the data will never reach a child component.*/}
+                <AnimalList animals={this.state.animals} />
             </article>
         )
     }
