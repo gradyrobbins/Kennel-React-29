@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 class Kennel extends Component {
     render() {
         return (
-            <React.Fragment className="kennel">
+            <React.Fragment>
                 <NavBar />
                 <ApplicationViews />
             </React.Fragment>

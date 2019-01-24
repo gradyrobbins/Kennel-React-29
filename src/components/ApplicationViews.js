@@ -4,6 +4,7 @@ import AnimalList from './animals/AnimalList'
 import LocationList2 from './location/LocationList2'
 import EmployeeList from './employee/EmployeeList'
 import OwnersList from './owners/OwnersList'
+import Dashboard from './api/Dashboard'
 
 // import AnimalManager from "../modules/AnimalManager"
 // // Example code. Make this fit into how you have written yours.
@@ -43,11 +44,35 @@ class ApplicationViews extends Component {
         { id: 5, name: "Dek" },
         { id: 6, name: "Zac" }
     ]
+    friendsFromAPI = [
+        {
+          "id": 1,
+          "userName": "alagrad94",
+          "firstName": "Russell",
+          "lastName": "Reiter",
+          "friends": [2,3]
+        },
+        {
+          "id": 2,
+          "userName": "johndoe1234",
+          "firstName": "John",
+          "lastName": "Doe",
+          "friends": [1,3]
+        },
+        {
+          "id": 3,
+          "userName": "janedoe5678",
+          "firstName": "Jane",
+          "lastName": "Doe",
+          "friends": [1,2]
+        }
+      ]
     state = {
         employees: this.employeesFromAPI,
         locations: this.locationsFromAPI,
         animals: this.animalsFromAPI,
-        owners: this.ownersFromAPI
+        owners: this.ownersFromAPI,
+        friends: this.friendsFromAPI
     }
 
     render() {
@@ -64,6 +89,9 @@ class ApplicationViews extends Component {
                 }} />
                 <Route path="/owners" render={(props) => {
                     return <OwnersList owners={this.state.owners} />
+                }} />
+                <Route path="/friends" render={(props) => {
+                    return <Dashboard friends={this.state.friends} />
                 }} />
             </React.Fragment>
         )
