@@ -1,0 +1,25 @@
+    {
+      "users":[
+        {
+          "id": 1,
+          "userName": "alagrad94",
+          "firstName": "Russell",
+          "lastName": "Reiter",
+          "friends": [2,3]
+        },
+        {
+          "id": 2,
+          "userName": "johndoe1234",
+          "firstName": "John",
+          "lastName": "Doe",
+          "friends": [1,2, 3]
+        },
+        {
+          "id": 3,
+          "userName": "janedoe5678",
+          "firstName": "Jane",
+          "lastName": "Doe",
+          "friends": []
+        }
+      ]
+    }
