@@ -3,8 +3,6 @@ import './Card.css'
 
 export default class Dashboard extends Component {
 
-
-
     render() {
 
         return (

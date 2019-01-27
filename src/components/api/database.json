@@ -49,7 +49,7 @@
       "id": 8
     }
   ],
-  "state": [
+  "usa": [
     {
       "state_id": 0,
       "name": "Delaware",
@@ -611,32 +611,7 @@
       "Bird": "Mariana fruit-dove"
     }
   ],
-  "jokes": [
-    {
-      "setup": "California",
-      "punchline": "California dreamin'",
-      "state_id": "",
-      "id": 19
-    },
-    {
-      "setup": "Wyoming",
-      "punchline": "never been",
-      "state_id": "",
-      "id": 20
-    },
-    {
-      "setup": "South Dakota",
-      "punchline": "badlands",
-      "state_id": "",
-      "id": 21
-    },
-    {
-      "setup": "Florida",
-      "punchline": "panhandle",
-      "state_id": "",
-      "id": 22
-    }
-  ],
+  
   "quarter": [
     {
       "quarter_id": 1,
@@ -728,4 +703,5 @@
       "user_id": 7,
       "state_id": 53
     }
+  ]
 }
