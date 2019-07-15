@@ -2,11 +2,14 @@
 .animals {
     margin: 5px;
     padding: 5px;
+    
     border: 5px solid brown;
     border-radius: 10px;
 }
 
 .animalList {
+    margin-top: 40px;
+    padding-top: 30px;
     display: flex;
     justify-content: space-between;
     border: 10px solid black;

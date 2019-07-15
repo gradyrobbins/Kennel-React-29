@@ -1,7 +1,9 @@
 .ownersList {
     display: flex;
-    margin: 10px;
-    padding: 10px;
+    /* margin: 10px;
+    padding: 10px; */
+    margin-top: 40px;
+    padding-top: 30px;
     background-color: whitesmoke;
     justify-content: space-around;
     flex-direction: row;
